@@ -24,7 +24,9 @@ class MyBookCard extends Component {
          {this.props.item.category} - ${this.props.item.price} 
           <CommentList comments={this.state.comments} />
         </Card.Text>
-        <CommentList comments={this.state.comments} />
+        <CommentList comments={this.state.comments} bookId={this.props.bookInfo.asin}
+        onNewComment={this.onNewComment}
+        updateComment={this.updateComment} />
       </Card.Body>
     </Card>
   )
